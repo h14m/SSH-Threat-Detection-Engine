@@ -1,0 +1,50 @@
+2026-05-23T16:31:01.956407+00:00 ip-172-31-40-73 sshd[11363]: drop connection #0 from [101.200.46.211]:56630 on [172.31.40.73]:22 penalty: connections without attempting authentication
+2026-05-23T16:31:02.245908+00:00 ip-172-31-40-73 sshd[11363]: drop connection #0 from [101.200.46.211]:56646 on [172.31.40.73]:22 penalty: connections without attempting authentication
+2026-05-23T16:31:02.535242+00:00 ip-172-31-40-73 sshd[11363]: drop connection #0 from [101.200.46.211]:56650 on [172.31.40.73]:22 penalty: connections without attempting authentication
+2026-05-23T16:31:02.835498+00:00 ip-172-31-40-73 sshd[11363]: drop connection #0 from [101.200.46.211]:52306 on [172.31.40.73]:22 penalty: connections without attempting authentication
+2026-05-23T16:31:03.122910+00:00 ip-172-31-40-73 sshd[11363]: drop connection #0 from [101.200.46.211]:52320 on [172.31.40.73]:22 penalty: connections without attempting authentication
+2026-05-23T16:31:03.410298+00:00 ip-172-31-40-73 sshd[11363]: drop connection #0 from [101.200.46.211]:52332 on [172.31.40.73]:22 penalty: connections without attempting authentication
+2026-05-23T16:37:19.677065+00:00 ip-172-31-40-73 sshd-session[37183]: Connection closed by 101.251.197.46 port 58097
+2026-05-23T16:38:22.899414+00:00 ip-172-31-40-73 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by ubuntu(uid=1000)
+2026-05-23T16:38:22.902818+00:00 ip-172-31-40-73 sudo: ubuntu : TTY=/dev/pts/1 ; PWD=/home/ubuntu/SSH-Threat-Monitor ; USER=root ; COMMAND=/usr/bin/cat /var/log/auth.log
+2026-05-23T16:38:22.907892+00:00 ip-172-31-40-73 sudo: pam_unix(sudo:session): session closed for user root
+2026-05-23T16:39:48.966297+00:00 ip-172-31-40-73 sshd-session[37253]: Connection closed by 8.130.180.222 port 49620
+2026-05-23T16:39:54.144681+00:00 ip-172-31-40-73 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by ubuntu(uid=1000)
+2026-05-23T16:39:54.144969+00:00 ip-172-31-40-73 sudo: ubuntu : TTY=/dev/pts/1 ; PWD=/home/ubuntu/SSH-Threat-Monitor ; USER=root ; COMMAND=/usr/bin/python3 main.py
+2026-05-23T16:39:54.313479+00:00 ip-172-31-40-73 sudo: pam_unix(sudo:session): session closed for user root
+2026-05-23T16:41:03.234929+00:00 ip-172-31-40-73 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by ubuntu(uid=1000)
+2026-05-23T16:41:03.235249+00:00 ip-172-31-40-73 sudo: ubuntu : TTY=/dev/pts/1 ; PWD=/home/ubuntu/SSH-Threat-Monitor ; USER=root ; COMMAND=/usr/bin/pip3 install colorama --break-system-packages
+2026-05-23T16:41:03.935824+00:00 ip-172-31-40-73 sudo: pam_unix(sudo:session): session closed for user root
+2026-05-23T16:41:10.504607+00:00 ip-172-31-40-73 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by ubuntu(uid=1000)
+2026-05-23T16:41:10.504735+00:00 ip-172-31-40-73 sudo: ubuntu : TTY=/dev/pts/1 ; PWD=/home/ubuntu/SSH-Threat-Monitor ; USER=root ; COMMAND=/usr/bin/python3 main.py
+2026-05-23T16:41:10.653373+00:00 ip-172-31-40-73 sudo: pam_unix(sudo:session): session closed for user root
+2026-05-23T16:44:57.344835+00:00 ip-172-31-40-73 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by ubuntu(uid=1000)
+2026-05-23T16:44:57.348387+00:00 ip-172-31-40-73 sudo: ubuntu : TTY=/dev/pts/1 ; PWD=/home/ubuntu/SSH-Threat-Monitor ; USER=root ; COMMAND=/usr/bin/python3 main.py
+2026-05-23T16:44:57.481976+00:00 ip-172-31-40-73 sudo: pam_unix(sudo:session): session closed for user root
+2026-05-23T16:46:32.689470+00:00 ip-172-31-40-73 sshd-session[37348]: Connection closed by 47.85.47.96 port 52560
+2026-05-23T16:47:06.562813+00:00 ip-172-31-40-73 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by ubuntu(uid=1000)
+2026-05-23T16:47:06.563029+00:00 ip-172-31-40-73 sudo: ubuntu : TTY=/dev/pts/1 ; PWD=/home/ubuntu/SSH-Threat-Monitor ; USER=root ; COMMAND=/usr/bin/python3 main.py
+2026-05-23T16:47:32.131894+00:00 ip-172-31-40-73 sudo: pam_unix(sudo:session): session closed for user root
+2026-05-23T16:48:26.951893+00:00 ip-172-31-40-73 sshd-session[37374]: Accepted publickey for ubuntu from 1.39.172.164 port 37388 ssh2: RSA SHA256:g2KEjfRJWpDpwVvSWSUvWBPfWICy1uMNrZwxpasBX8E
+2026-05-23T16:48:26.955075+00:00 ip-172-31-40-73 sshd-session[37374]: pam_unix(sshd:session): session opened for user ubuntu(uid=1000) by ubuntu(uid=0)
+2026-05-23T16:48:26.958590+00:00 ip-172-31-40-73 systemd-logind[672]: New session '155' of user 'ubuntu' with class 'user' and type 'tty'.
+2026-05-23T16:48:55.190292+00:00 ip-172-31-40-73 sshd-session[37464]: Invalid user wronguser from 127.0.0.1 port 47796
+2026-05-23T16:48:55.193557+00:00 ip-172-31-40-73 sshd-session[37464]: Connection closed by invalid user wronguser 127.0.0.1 port 47796 [preauth]
+2026-05-23T16:49:09.351756+00:00 ip-172-31-40-73 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by ubuntu(uid=1000)
+2026-05-23T16:49:09.356273+00:00 ip-172-31-40-73 sudo: ubuntu : TTY=/dev/pts/1 ; PWD=/home/ubuntu/SSH-Threat-Monitor ; USER=root ; COMMAND=/usr/bin/python3 main.py
+2026-05-23T16:50:55.983340+00:00 ip-172-31-40-73 sudo: pam_unix(sudo:session): session closed for user root
+2026-05-23T16:51:41.654700+00:00 ip-172-31-40-73 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by ubuntu(uid=1000)
+2026-05-23T16:51:41.654904+00:00 ip-172-31-40-73 sudo: ubuntu : TTY=/dev/pts/1 ; PWD=/home/ubuntu/SSH-Threat-Monitor ; USER=root ; COMMAND=/usr/bin/python3 main.py
+2026-05-23T16:52:04.000280+00:00 ip-172-31-40-73 sshd-session[37526]: Invalid user wronguser from 127.0.0.1 port 42478
+2026-05-23T16:52:04.003398+00:00 ip-172-31-40-73 sshd-session[37526]: Connection closed by invalid user wronguser 127.0.0.1 port 42478 [preauth]
+2026-05-23T16:54:08.042814+00:00 ip-172-31-40-73 sudo: pam_unix(sudo:session): session closed for user root
+2026-05-23T17:03:30.772921+00:00 ip-172-31-40-73 sshd-session[37547]: Accepted publickey for ubuntu from 1.39.172.164 port 37418 ssh2: RSA SHA256:g2KEjfRJWpDpwVvSWSUvWBPfWICy1uMNrZwxpasBX8E
+2026-05-23T17:03:30.774603+00:00 ip-172-31-40-73 sshd-session[37547]: pam_unix(sshd:session): session opened for user ubuntu(uid=1000) by ubuntu(uid=0)
+2026-05-23T17:03:30.779826+00:00 ip-172-31-40-73 systemd-logind[672]: New session '156' of user 'ubuntu' with class 'user' and type 'tty'.
+2026-05-23T17:06:53.604866+00:00 ip-172-31-40-73 sshd-session[37684]: Connection closed by 8.138.207.129 port 37210
+2026-05-23T17:12:35.353426+00:00 ip-172-31-40-73 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by ubuntu(uid=1000)
+2026-05-23T17:12:35.357027+00:00 ip-172-31-40-73 sudo: ubuntu : TTY=/dev/pts/3 ; PWD=/home/ubuntu/SSH-Threat-Monitor ; USER=root ; COMMAND=/usr/bin/apt install tree -y
+2026-05-23T17:12:41.263688+00:00 ip-172-31-40-73 sudo: pam_unix(sudo:session): session closed for user root
+2026-05-23T17:14:43.686814+00:00 ip-172-31-40-73 sshd-session[37963]: Connection closed by 178.73.224.79 port 21811
+2026-05-23T17:14:43.835336+00:00 ip-172-31-40-73 sshd-session[37964]: banner exchange: Connection from 178.73.226.15 port 34915: invalid format
+2026-05-23T17:14:44.185624+00:00 ip-172-31-40-73 sshd-session[37965]: banner exchange: Connection from 146.247.228.70 port 41711: invalid format
