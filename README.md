@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project is a Security Operations Center (SOC) Home Lab designed to simulate real-world security monitoring, threat detection, and incident investigation workflows.
+This project is a Security Operations Center (SOC) Home Lab designed to simulate real-world security monitoring, threat detection, and incident investigation workflows. 
 
 The environment consists of an AWS-hosted Ubuntu server acting as a monitored asset, Kali Linux as the attack machine, and Splunk Enterprise as the Security Information and Event Management (SIEM) platform.
 
