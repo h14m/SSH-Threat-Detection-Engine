@@ -1,125 +1,176 @@
-# SOC Monitoring & SIEM Threat Detection Platform
+# AWS-Based SOC Monitoring & SIEM Threat Detection Platform
 
 ## Overview
 
-A real-time SSH threat monitoring and security analytics platform developed using Python on Ubuntu EC2.
+This project is a Security Operations Center (SOC) Home Lab designed to simulate real-world security monitoring, threat detection, and incident investigation workflows.
 
-The system monitors Linux authentication logs, detects SSH brute-force attacks, enriches attacker data using GeoIP lookup, generates SOC-style alerts, and visualizes attack statistics through a Streamlit dashboard.
+The environment consists of an AWS-hosted Ubuntu server acting as a monitored asset, Kali Linux as the attack machine, and Splunk Enterprise as the Security Information and Event Management (SIEM) platform.
 
-This project simulates real-world SOC monitoring and incident detection workflows.
+The solution collects and analyzes SSH authentication logs, detects reconnaissance and unauthorized access attempts, identifies attacker IP addresses, and provides SOC-style dashboards for monitoring security events in real time.
 
 ---
 
-## Features
+## Architecture
 
-- AWS EC2 Ubuntu Monitoring
-- Splunk SIEM Integration
-- SSH Threat Detection
-- Top Attacker IP Analysis
-- Threat Hunting using SPL
-- Detection Engineering
-- SOC Dashboard Monitoring
+Kali Linux (Attacker)
+↓
+AWS EC2 Ubuntu Server
+↓
+Linux Authentication Logs (auth.log)
+↓
+Splunk Enterprise SIEM
+↓
+Dashboards, Detection Rules, Investigation
+
+---
+
+## Key Features
+
+### Security Monitoring
+
+* Real-time SSH log monitoring
+* Linux authentication log analysis
+* Suspicious connection tracking
+* Unauthorized access detection
+
+### Threat Detection
+
+* Invalid username detection
+* SSH reconnaissance detection
+* Connection anomaly detection
+* Top attacker IP identification
+
+### SIEM & Threat Hunting
+
+* Splunk Enterprise deployment
+* Custom SPL detection queries
+* Security event investigation
+* Log correlation and analysis
+
+### SOC Dashboard
+
+* Top Attacker IPs
+* SSH Attack Timeline
+* Top Targeted Usernames
+* SSH Scanning Activity
+* Recent SSH Attack Events
+* Successful vs Failed Access Analysis
+
+### Attack Simulation
+
+* Kali Linux attack platform
+* Nmap reconnaissance simulation
+* SSH enumeration testing
+* Attack-to-detection validation
 
 ---
 
 ## Technologies Used
 
-- Python
-- Linux (Ubuntu)
-- AWS EC2
-- Streamlit
-- Pandas
-- Matplotlib
-- Colorama
+* AWS EC2
+* Ubuntu Linux
+* Splunk Enterprise
+* Kali Linux
+* Python
+* Streamlit
+* Pandas
+* Matplotlib
+* Linux Authentication Logs
+* SPL (Search Processing Language)
 
 ---
 
 ## Project Structure
 
-```text
 SSH-Threat-Monitor/
-│
+
 ├── main.py
+
 ├── parser.py
+
 ├── alerts.py
+
 ├── dashboard.py
+
 ├── requirements.txt
+
 ├── README.md
-│
+
 ├── logs/
+
 ├── reports/
-│
+
 └── screenshots/
-```
 
 ---
 
-## Installation
+## SOC Detection Queries
 
-Clone the repository:
+### Top Attacker IPs
 
-```bash
-git clone YOUR_GITHUB_REPO_URL
-cd SSH-Threat-Monitor
+```spl
+index=* "Invalid user"
+| rex "from (?<attacker_ip>\d+\.\d+\.\d+\.\d+)"
+| stats count by attacker_ip
+| sort - count
 ```
 
-Install dependencies:
+### SSH Reconnaissance Detection
 
-```bash
-pip3 install -r requirements.txt --break-system-packages
-```
-
----
-
-## Usage
-
-Run the monitoring system:
-
-```bash
-sudo python3 main.py
-```
-
-Run dashboard:
-
-```bash
-streamlit run dashboard.py
-```
-
----
-
-## Sample Output
-
-```text
-[ALERT] Possible Brute Force Attack Detected from 161.129.211.56
-Location: New York, United States
-Failed Attempts: 442
+```spl
+index=* "Invalid user"
+| rex "from (?<attacker_ip>\d+\.\d+\.\d+\.\d+)"
+| stats count by attacker_ip
+| where count > 3
 ```
 
 ---
 
 ## Screenshots
 
-### Real-Time SSH Monitoring
+### SOC Monitoring Dashboard
 
-Add screenshot here.
+![Dashboard](screenshots/dashboard.png)
 
-### Streamlit Dashboard
+### SSH Reconnaissance Alert
 
-Add dashboard screenshot here.
+![Alert](screenshots/alerts.png)
+
+### Top Attacker IP Analysis
+
+![Top Attacker IPs](screenshots/top_attacker_ips.png)
 
 ---
 
-## Future Improvements
+## Skills Demonstrated
 
-- Email alert integration
-- Telegram notifications
-- Threat intelligence feed integration
-- Docker deployment
-- Real-time streaming log ingestion
-- Attack trend visualization
+* Security Operations Center (SOC)
+* SIEM Monitoring
+* Splunk Administration
+* Threat Hunting
+* Detection Engineering
+* Linux Security Monitoring
+* Log Analysis
+* Incident Investigation
+* AWS Security Monitoring
+* Attack Simulation
+* Cyber Threat Detection
+
+---
+
+## Future Enhancements
+
+* Windows Sysmon Integration
+* Splunk Universal Forwarder Deployment
+* Email Alerting
+* Threat Intelligence Integration
+* MITRE ATT&CK Mapping
+* Automated Incident Response
+* Multi-Host Log Collection
 
 ---
 
 ## Author
 
-mahi
+Mahi Honnagol
+Cybersecurity | SOC Analyst | Cloud Security Enthusiast
