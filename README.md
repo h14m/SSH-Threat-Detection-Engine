@@ -1,4 +1,4 @@
-# Python-Based SSH Threat Detection Engine
+# SSH Threat Detection Engine
 
 ## Overview
 
