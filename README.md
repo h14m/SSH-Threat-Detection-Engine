@@ -72,40 +72,55 @@ Dashboards, Detection Rules, Investigation
 * Splunk Enterprise
 * Kali Linux
 * Python
-* Streamlit
-* Pandas
-* Matplotlib
 * Linux Authentication Logs
 * SPL (Search Processing Language)
+* Git
+* Github
 
 ---
 
 ## Project Structure
 
-SSH-Threat-Monitor/
+AWS-SOC-Monitoring-Platform/
 
 ├── main.py
-
 ├── parser.py
-
 ├── alerts.py
-
 ├── dashboard.py
-
 ├── requirements.txt
-
 ├── README.md
-
 ├── logs/
-
 ├── reports/
-
+│   └── incident_report.md
 └── screenshots/
-
 ---
 
 ## SOC Detection Queries
+## Detection Rules
 
+### SSH Brute Force Detection
+```spl
+index=* "Failed password"
+| stats count by src_ip
+| where count > 10
+```
+
+Purpose:
+Detect repeated failed SSH authentication attempts from a single source IP.
+
+---
+
+### Failed Login Trend Analysis
+
+```spl
+index=* "Failed password"
+| timechart count
+```
+
+Purpose:
+Monitor spikes in authentication failures and identify attack patterns.
+
+---
 ### Top Attacker IPs
 
 ```spl
@@ -123,7 +138,16 @@ index=* "Invalid user"
 | stats count by attacker_ip
 | where count > 3
 ```
+## Incident Investigation Workflow
 
+1. Generate SSH attack activity from Kali Linux.
+2. Collect Linux authentication logs from AWS EC2 Ubuntu.
+3. Ingest logs into Splunk Enterprise.
+4. Execute SPL detection queries.
+5. Identify attacker IP addresses.
+6. Analyze attack timeline and targeted usernames.
+7. Investigate indicators of compromise (IOCs).
+8. Document findings in incident reports.
 ---
 
 ## Screenshots
@@ -142,20 +166,21 @@ index=* "Invalid user"
 
 ---
 
-## Skills Demonstrated
+## SOC Analyst Skills Demonstrated
 
-* Security Operations Center (SOC)
 * SIEM Monitoring
-* Splunk Administration
-* Threat Hunting
-* Detection Engineering
-* Linux Security Monitoring
+* Security Event Analysis
 * Log Analysis
+* Threat Detection
+* Threat Hunting
 * Incident Investigation
+* Incident Response
+* Detection Engineering
+* Splunk Administration
+* Linux Security Monitoring
 * AWS Security Monitoring
-* Attack Simulation
-* Cyber Threat Detection
-
+* MITRE ATT&CK Mapping
+* Security Event Correlation
 ---
 ## MITRE ATT&CK Mapping
 
@@ -169,6 +194,22 @@ The attack scenarios and detections implemented in this project align with the f
 | T1046 | Network Service Discovery | Identification of exposed services and ports |
 
 This mapping helps security analysts understand attacker behavior and improves detection engineering capabilities.
+---
+## Relevant SOC Concepts
+
+* SIEM
+* SOC Operations
+* Threat Detection
+* Threat Hunting
+* Incident Response
+* Security Monitoring
+* Event Correlation
+* MITRE ATT&CK
+* Linux Log Analysis
+* AWS Security
+* Splunk SPL
+  
+---
 
 ## Future Enhancements
 
@@ -176,7 +217,6 @@ This mapping helps security analysts understand attacker behavior and improves d
 * Splunk Universal Forwarder Deployment
 * Email Alerting
 * Threat Intelligence Integration
-* MITRE ATT&CK Mapping
 * Automated Incident Response
 * Multi-Host Log Collection
 
