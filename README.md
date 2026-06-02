@@ -157,6 +157,18 @@ index=* "Invalid user"
 * Cyber Threat Detection
 
 ---
+## MITRE ATT&CK Mapping
+
+The attack scenarios and detections implemented in this project align with the following MITRE ATT&CK techniques:
+
+| Technique ID | Technique Name | Description |
+|-------------|----------------|-------------|
+| T1110 | Brute Force | Repeated SSH authentication attempts against user accounts |
+| T1595 | Active Scanning | Reconnaissance and service discovery using Nmap |
+| T1078 | Valid Accounts | Attempted use of legitimate account credentials |
+| T1046 | Network Service Discovery | Identification of exposed services and ports |
+
+This mapping helps security analysts understand attacker behavior and improves detection engineering capabilities.
 
 ## Future Enhancements
 
